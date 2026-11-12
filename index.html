@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RED BULL — Gives You Wings</title>
+<meta name="description" content="Bukan sekadar minuman. Ini bahan bakar. Kafein, taurin, dan adrenalin dalam satu kaleng.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="loader-can">
+    <div class="loader-fill" id="loaderFill"></div>
+  </div>
+  <div class="loader-txt">MEMUAT ENERGI <span id="pct">0</span>%</div>
+</div>
+
+<div class="progress" id="progress"></div>
+<div class="grain"></div>
+<div class="scanlines"></div>
+<div class="cursor-glow" id="glow"></div>
+
+<nav>
+  <div class="logo-nav"><span class="mark">◆</span>RED BULL</div>
+  <div class="nav-links">
+    <a href="#energi">Energi</a>
+    <a href="#rasa">Rasa</a>
+    <a href="#beli">Beli</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="ghost"><span>WINGS</span></div>
+  <div class="halo"></div>
+  <div class="halo two"></div>
+
+  <div class="can-stage">
+    <div class="can-glow"></div>
+    <canvas id="gl" aria-label="Kaleng Red Bull 3D"></canvas>
+    <div class="canvas-fallback" id="fallback" hidden>
+      <div class="fb-shine"></div>
+      <div class="fb-label">
+        <b>RED</b><b>BULL</b>
+        <i>ENERGY DRINK</i>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-copy">
+    <div class="kicker"><span class="dot"></span>Vitalizes Body &amp; Mind</div>
+    <h1>
+      <span class="line"><i>RED</i></span>
+      <span class="line"><i>BULL</i></span>
+    </h1>
+    <p class="sub">Bukan sekadar minuman. Ini bahan bakar. Kafein, taurin, dan adrenalin dalam satu kaleng yang bikin kamu terbang lebih tinggi dari yang kamu kira.</p>
+    <div class="cta-row">
+      <a href="https://wa.me/6281992126728?text=Halo%2C%20saya%20mau%20pesan%20Red%20Bull" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Dapatkan Sekarang</a>
+      <a href="#energi" class="btn btn-ghost">Lihat Kandungan</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="rail"></div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="track" id="track1"></div>
+</div>
+
+<!-- ============ STATS ============ -->
+<section class="stats" id="energi">
+  <div class="stat reveal"><span class="num" data-count="80">0</span><span class="lbl">mg Kafein</span></div>
+  <div class="stat reveal"><span class="num" data-count="1000">0</span><span class="lbl">mg Taurin</span></div>
+  <div class="stat reveal"><span class="num" data-count="9">0</span><span class="lbl">Jenis Vitamin B</span></div>
+  <div class="stat reveal"><span class="num" data-count="0">0</span><span class="lbl">Alasan Menyerah</span></div>
+</section>
+
+<!-- ============ SPLIT ============ -->
+<section class="split">
+  <div>
+    <span class="eyebrow reveal">Formula Rahasia</span>
+    <h2 class="reveal">Energi yang <em>Meledak</em> Sejak Tegukan Pertama</h2>
+    <p class="reveal">Setiap kaleng Red Bull mengandung kombinasi presisi kafein, taurin, gula, dan vitamin B yang bekerja sinergis. Bukan rasa manis biasa — ini sensasi gelombang energi yang naik perlahan lalu menghantam.</p>
+    <p class="reveal">Dirancang untuk momen ketika kamu butuh lebih: deadline tengah malam, sesi latihan terakhir, perjalanan panjang, atau ide yang harus segera dieksekusi.</p>
+    <div class="ingredients reveal">
+      <span class="chip">Kafein</span>
+      <span class="chip">Taurin</span>
+      <span class="chip">Vitamin B3</span>
+      <span class="chip">Vitamin B6</span>
+      <span class="chip">Vitamin B12</span>
+      <span class="chip">Asam Pantotenat</span>
+      <span class="chip">Gula</span>
+      <span class="chip">Air Berkarbonasi</span>
+    </div>
+  </div>
+  <div class="showcase reveal">
+    <div class="ring"></div><div class="ring"></div><div class="ring"></div>
+    <canvas id="gl2" aria-label="Kaleng Red Bull 3D varian kedua"></canvas>
+  </div>
+</section>
+
+<!-- ============ FLAVORS ============ -->
+<section class="flavors" id="rasa">
+  <div class="flavors-head">
+    <div>
+      <span class="eyebrow reveal">Pilih Senjatamu</span>
+      <h2 class="reveal" style="margin-bottom:0">Empat Karakter.<br>Satu <em>Misi</em>.</h2>
+    </div>
+    <p class="reveal" style="max-width:320px;color:rgba(244,241,234,.5);font-weight:300;line-height:1.75;font-size:14.5px">
+      Dari klasik yang tak pernah salah sampai edisi bebas gula untuk kamu yang hitung kalori.
+    </p>
+  </div>
+
+  <div class="flavor-grid">
+    <article class="card reveal" style="--c:#DC052D">
+      <span class="idx">01 — ORIGINAL</span>
+      <div class="mini-can"></div>
+      <div>
+        <h3>The Classic</h3>
+        <p>Rasa ikonik yang menciptakan kategori. Manis, tajam, dan langsung terasa.</p>
+      </div>
+      <span class="arrow">Coba →</span>
+    </article>
+
+    <article class="card reveal" style="--c:#0B1F3B">
+      <span class="idx">02 — SUGARFREE</span>
+      <div class="mini-can"></div>
+      <div>
+        <h3>Zero Sugar</h3>
+        <p>Semua energi, tanpa gula. Rasa bersih dengan akhir yang ringan.</p>
+      </div>
+      <span class="arrow">Coba →</span>
+    </article>
+
+    <article class="card reveal" style="--c:#1E5BC6">
+      <span class="idx">03 — EDITION</span>
+      <div class="mini-can"></div>
+      <div>
+        <h3>Blue Wave</h3>
+        <p>Profil buah tropis dengan sensasi dingin. Segar sampai suapan terakhir.</p>
+      </div>
+      <span class="arrow">Coba →</span>
+    </article>
+
+    <article class="card reveal" style="--c:#7A5B12">
+      <span class="idx">04 — EDITION</span>
+      <div class="mini-can"></div>
+      <div>
+        <h3>Amber Rush</h3>
+        <p>Nuansa karamel dan rempah hangat. Cocok untuk shift malam panjang.</p>
+      </div>
+      <span class="arrow">Coba →</span>
+    </article>
+  </div>
+</section>
+
+<!-- ============ PULSE / METER ============ -->
+<section class="pulse-sec">
+  <span class="eyebrow reveal" style="text-align:center">Uji Performa</span>
+  <h2 class="reveal">Rasakan <em>Bedanya</em> dalam 30 Menit</h2>
+  <p class="lead reveal">Data internal dari panel penguji kami. Bukan klaim kosong — ini rata-rata peningkatan yang dilaporkan setelah satu kaleng.</p>
+
+  <div class="meter" id="meter">
+    <div class="meter-row">
+      <div class="top"><span>Fokus &amp; Kewaspadaan</span><b>+92%</b></div>
+      <div class="bar"><i style="--w:92%"></i></div>
+    </div>
+    <div class="meter-row">
+      <div class="top"><span>Stamina Fisik</span><b>+78%</b></div>
+      <div class="bar"><i style="--w:78%"></i></div>
+    </div>
+    <div class="meter-row">
+      <div class="top"><span>Kecepatan Reaksi</span><b>+85%</b></div>
+      <div class="bar"><i style="--w:85%"></i></div>
+    </div>
+    <div class="meter-row">
+      <div class="top"><span>Mood &amp; Motivasi</span><b>+96%</b></div>
+      <div class="bar"><i style="--w:96%"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE 2 ============ -->
+<div class="marquee tilt-right reverse">
+  <div class="track" id="track2"></div>
+</div>
+
+<!-- ============ BIG CTA ============ -->
+<section class="bigcta" id="beli">
+  <div class="bgword">FLY</div>
+  <span class="eyebrow reveal" style="text-align:center">Jangan Cuma Lihat</span>
+  <h2 class="reveal">Siap <em>Terbang?</em></h2>
+  <div class="cta-row reveal">
+    <a href="https://wa.me/6281992126728?text=Halo%2C%20saya%20mau%20pesan%20Red%20Bull" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Beli Sekarang</a>
+    <a href="https://wa.me/6281992126728?text=Halo%2C%20saya%20mau%20tanya%20lokasi%20toko%20Red%20Bull" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Cari Toko Terdekat</a>
+  </div>
+</section>
+
+<footer>
+  <div class="fnote">© 2026 — Konsep desain promosi. Bukan situs resmi.</div>
+  <div class="flinks">
+    <a href="#">Instagram</a>
+    <a href="#">TikTok</a>
+    <a href="#">YouTube</a>
+    <a href="#">Kontak</a>
+  </div>
+</footer>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

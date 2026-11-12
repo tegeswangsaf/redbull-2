@@ -1,0 +1,20 @@
+{
+  "name": "redbull-promo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page promosi Red Bull dengan kaleng 3D WebGL (Three.js)",
+  "scripts": {
+    "dev": "npx --yes serve . -l 3000",
+    "start": "npx --yes serve . -l 3000"
+  },
+  "keywords": [
+    "redbull",
+    "landing-page",
+    "threejs",
+    "webgl"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.169.0"
+  }
+}
